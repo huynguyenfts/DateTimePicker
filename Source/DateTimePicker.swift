@@ -216,6 +216,12 @@ public protocol DateTimePickerDelegate: AnyObject {
         }
     }
     
+    public var hasAnimationScrollDate = true {
+        didSet {
+            configureView()
+        }
+    }
+    
     /// whether to include second in time selection, default to false
     public var includesSecond = false {
         didSet {

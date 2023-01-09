@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00968812296BF3DD00226B55 /* DateTimePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7889C32116AC4900B26F02 /* DateTimePicker.framework */; };
 		2C7889CA2116AC4A00B26F02 /* DateTimePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7889C32116AC4900B26F02 /* DateTimePicker.framework */; };
 		2C7889CB2116AC4A00B26F02 /* DateTimePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7889C32116AC4900B26F02 /* DateTimePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C788A1B2116AF2E00B26F02 /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF7C3791D8B9F590043D9C4 /* DateTimePicker.swift */; };
@@ -29,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		00968813296BF3DD00226B55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEF7C3581D8B9EBC0043D9C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C7889C22116AC4900B26F02;
+			remoteInfo = DateTimePicker;
+		};
 		2C7889C82116AC4A00B26F02 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DEF7C3581D8B9EBC0043D9C4 /* Project object */;
@@ -80,12 +88,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7889CA2116AC4A00B26F02 /* DateTimePicker.framework in Frameworks */,
+				00968812296BF3DD00226B55 /* DateTimePicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00968811296BF3DD00226B55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2C7889C42116AC4A00B26F02 /* DateTimePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +117,7 @@
 				DEF7C3781D8B9F590043D9C4 /* Source */,
 				2C7889C42116AC4A00B26F02 /* DateTimePicker */,
 				DEF7C3611D8B9EBC0043D9C4 /* Products */,
+				00968811296BF3DD00226B55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +190,7 @@
 			);
 			dependencies = (
 				2C7889C92116AC4A00B26F02 /* PBXTargetDependency */,
+				00968814296BF3DD00226B55 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = DateTimePicker;
@@ -272,6 +290,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		00968814296BF3DD00226B55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C7889C22116AC4900B26F02 /* DateTimePicker */;
+			targetProxy = 00968813296BF3DD00226B55 /* PBXContainerItemProxy */;
+		};
 		2C7889C92116AC4A00B26F02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2C7889C22116AC4900B26F02 /* DateTimePicker */;
