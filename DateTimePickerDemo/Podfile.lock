@@ -1,16 +1,21 @@
 PODS:
-  - DateTimePicker (2.5.1)
+  - DateTimePicker (2.5.3)
 
 DEPENDENCIES:
-  - DateTimePicker (from `../`)
+  - "DateTimePicker (from `git@github.com:huynguyenfts/DateTimePicker.git`)"
 
 EXTERNAL SOURCES:
   DateTimePicker:
-    :path: "../"
+    :git: "git@github.com:huynguyenfts/DateTimePicker.git"
+
+CHECKOUT OPTIONS:
+  DateTimePicker:
+    :commit: 317b9e8f5830aadb50e0265061ec7947141a7bd0
+    :git: "git@github.com:huynguyenfts/DateTimePicker.git"
 
 SPEC CHECKSUMS:
-  DateTimePicker: f7d3305252c1d7a67c9cca58ce8592f8396841ca
+  DateTimePicker: 52701ddf656a50856d3510955933f767cd2c947c
 
-PODFILE CHECKSUM: a26e66cb94802972f6430185232278dc132b5b0e
+PODFILE CHECKSUM: 435e3cf34403feb16147dce6217acf6a69096bbb
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.3
