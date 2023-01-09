@@ -73,7 +73,7 @@ class FullDateCollectionViewCell: UICollectionViewCell {
         numberLabel.font = style.numberLabelFont
 
         contentView.layer.borderColor = darkColor.withAlphaComponent(0.3).cgColor
-        contentView.backgroundColor = isSelected == true ? darkColor : normalColor
+        contentView.backgroundColor = isSelected == true ? highlightColor : normalColor
     }
 
 }
