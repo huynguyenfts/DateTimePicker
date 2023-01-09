@@ -40,7 +40,7 @@ class FullDateCollectionViewCell: UICollectionViewCell {
 //            monthLabel.textColor = isSelected == true ? .white : darkColor.withAlphaComponent(0.5)
 //            dayLabel.textColor = isSelected == true ? .white : darkColor.withAlphaComponent(0.5)
 //            numberLabel.textColor = isSelected == true ? .white : darkColor
-            contentView.backgroundColor = isSelected == true ? darkColor : normalColor
+            contentView.backgroundColor = isSelected == true ? highlightColor : normalColor
 //            contentView.layer.borderWidth = isSelected == true ? 0 : 1
         }
     }
