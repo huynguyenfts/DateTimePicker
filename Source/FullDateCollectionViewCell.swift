@@ -37,11 +37,11 @@ class FullDateCollectionViewCell: UICollectionViewCell {
 
     override var isSelected: Bool {
         didSet {
-            monthLabel.textColor = isSelected == true ? .white : darkColor.withAlphaComponent(0.5)
-            dayLabel.textColor = isSelected == true ? .white : darkColor.withAlphaComponent(0.5)
-            numberLabel.textColor = isSelected == true ? .white : darkColor
-            contentView.backgroundColor = isSelected == true ? highlightColor : normalColor
-            contentView.layer.borderWidth = isSelected == true ? 0 : 1
+//            monthLabel.textColor = isSelected == true ? .white : darkColor.withAlphaComponent(0.5)
+//            dayLabel.textColor = isSelected == true ? .white : darkColor.withAlphaComponent(0.5)
+//            numberLabel.textColor = isSelected == true ? .white : darkColor
+            contentView.backgroundColor = isSelected == true ? darkColor : normalColor
+//            contentView.layer.borderWidth = isSelected == true ? 0 : 1
         }
     }
 
@@ -54,7 +54,7 @@ class FullDateCollectionViewCell: UICollectionViewCell {
         mdateFormatter.dateFormat = "MMMM"
         mdateFormatter.locale = locale
         monthLabel.text = mdateFormatter.string(from: date)
-        monthLabel.textColor = isSelected == true ? .white : darkColor.withAlphaComponent(0.5)
+        monthLabel.textColor = darkColor.withAlphaComponent(0.5)
         monthLabel.font = style.monthLabelFont
         monthLabel.isHidden = !includesMonth
 
@@ -62,17 +62,17 @@ class FullDateCollectionViewCell: UICollectionViewCell {
         dateFormatter.dateFormat = "EEEE"
         dateFormatter.locale = locale
         dayLabel.text = dateFormatter.string(from: date).uppercased()
-        dayLabel.textColor = isSelected == true ? .white : darkColor.withAlphaComponent(0.5)
+        dayLabel.textColor = darkColor.withAlphaComponent(0.5)
         dayLabel.font = style.dayLabelFont
 
         let numberFormatter = DateFormatter()
         numberFormatter.dateFormat = "d"
         numberFormatter.locale = locale
         numberLabel.text = numberFormatter.string(from: date)
-        numberLabel.textColor = isSelected == true ? .white : darkColor
+        numberLabel.textColor = darkColor
         numberLabel.font = style.numberLabelFont
 
-        contentView.layer.borderColor = darkColor.withAlphaComponent(0.2).cgColor
+        contentView.layer.borderColor = darkColor.withAlphaComponent(0.3).cgColor
         contentView.backgroundColor = isSelected == true ? highlightColor : normalColor
     }
 

@@ -110,6 +110,13 @@ public protocol DateTimePickerDelegate: AnyObject {
             doneButton.backgroundColor = doneBackgroundColor
         }
     }
+    
+    public var doneBorderWidth: CGFloat = 1 {
+        didSet {
+            configureView()
+        }
+    }
+    
     /// custom Background Color Content Viewr, default to white
     public var contentViewBackgroundColor: UIColor = .white {
         didSet {
@@ -212,6 +219,12 @@ public protocol DateTimePickerDelegate: AnyObject {
             if isDatePickerOnly {
                 isTimePickerOnly = false
             }
+            configureView()
+        }
+    }
+    
+    public var hasAnimationScrollDate = true {
+        didSet {
             configureView()
         }
     }
@@ -413,7 +426,7 @@ public protocol DateTimePickerDelegate: AnyObject {
         cancelButton.titleLabel?.font = customFontSetting.cancelButtonFont
         
         todayButton.setTitle(todayButtonTitle, for: .normal)
-        todayButton.setTitleColor(highlightColor, for: .normal)
+        todayButton.setTitleColor(darkColor, for: .normal)
         todayButton.addTarget(self, action: #selector(DateTimePicker.setToday), for: .touchUpInside)
         todayButton.contentHorizontalAlignment = isRTL ? .left : .right
         todayButton.titleLabel?.font = customFontSetting.todayButtonFont
@@ -443,10 +456,12 @@ public protocol DateTimePickerDelegate: AnyObject {
         
         // done button
         doneButton.setTitle(doneButtonTitle, for: .normal)
-        doneButton.setTitleColor(.white, for: .normal)
+        doneButton.setTitleColor(darkColor, for: .normal)
         doneButton.backgroundColor = doneBackgroundColor ?? darkColor.withAlphaComponent(0.5)
         doneButton.titleLabel?.font = customFontSetting.doneButtonFont
-        doneButton.layer.cornerRadius = 3
+        doneButton.layer.cornerRadius = 10
+        doneButton.layer.borderColor = darkColor.cgColor
+        doneButton.layer.borderWidth = doneBorderWidth
         doneButton.layer.masksToBounds = true
         doneButton.addTarget(self, action: #selector(DateTimePicker.donePicking(sender:)), for: .touchUpInside)
         

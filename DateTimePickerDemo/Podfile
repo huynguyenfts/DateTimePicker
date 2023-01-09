@@ -3,6 +3,6 @@ platform :ios, '10.0'
 
 target 'DateTimePickerDemo' do
   use_frameworks!
-  pod 'DateTimePicker', :path => '../'
+  pod 'DateTimePicker', :git => 'git@github.com:huynguyenfts/DateTimePicker.git'
 
 end
